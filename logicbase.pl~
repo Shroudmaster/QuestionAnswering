@@ -1,45 +1,58 @@
 %% Ok, a principio estarei listando aqui a base das relacoes do Henrique
-%% VII conforme a wikipedia
+%% VII conforme a wikipedia.
 %% (https://pt.wikipedia.org/wiki/Henrique_VIII_de_Inglaterra). Vou
 %% tentar fazer a principio so o grosso das relacoes familiares diretas
 %% dele que eu e thiago olhamos na quinta.
 %
 
-/** Relacoes familiares diretas e legitimas */
+/** Relacoes familiares diretas e legitimas. */
 
-/** Da king */
+/** Da king. */
 
-pai(HenriqueVII,HenriqueVIII). /** Favor manter a forma pai(Pai,Filho) */
-mae(IsabeldeIorque, HenriqueVIII). /** Mesmo role */
-
-
-/** Da Kings Children */
-
-/** Catarina de Aragao */
-
-pai(HenriqueVIII, Henrique).
-pai(HenriqueVIII, Maria).
-pai(HenriqueVIII, Henrique).  /** Tiveram dois henriques */
-mae(CatarinadeAragao, Henrique).
-mae(CatarinadeAragao, Maria).
-mae(CatarinadeAragao, Henrique).
-
-/** Ana Bolena */
-pai(HenriqueVIII, Isabel).
-pai(HenriqueVIII, Henrique).
-mae(AnaBolena, Isabel).
-mae(AnaBolena, Henrique).
-
-/** Joana Seymour */
-
-pai(HenriqueVIII, Eduardo).
-mae(JoanaSeymour, Eduardo).
+pai(henriqueVIII, henrique).
+pai(henriqueVIII, maria).
+pai(henriqueVIII, henrique).  /** Tiveram dois henriques. */
+pai(henriqueVIII, isabel).
+pai(henriqueVIII, henrique).
+pai(henriqueVIII, henrique).
+pai(henriqueVIII, eduardo).
+pai(henriqueVII,henriqueVIII). /** Favor manter a forma pai(Pai,Filho). */
+mae(isabeldeIorque, henriqueVIII). /** Mesmo role. */
 
 
+/** Da Kings Children. */
 
-/** Isabel Blount */
+/** Catarina de Aragao. */
 
-pai(HenriqueVIII, Henrique).
+mae(catarinadeAragao, henrique).
+mae(catarinadeAragao, maria).
+mae(catarinadeAragao, henrique).
+
+/** Ana Bolena. */
+mae(anaBolena, isabel).
+mae(anaBolena, henrique).
+
+/** Joana Seymour. */
+
+mae(joanaSeymour, eduardo).
+
+
+
+/** Isabel Blount. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
