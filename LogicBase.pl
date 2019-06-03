@@ -9,37 +9,39 @@
 
 /** Da king */
 
-pai(HenriqueVII,HenriqueVIII). /** Favor manter a forma pai(Pai,Filho) */
-mae(IsabeldeIorque, HenriqueVIII). /** Mesmo role */
+pai(henriqueVII,henriqueVIII). /** Favor manter a forma pai(Pai,Filho) */
+mae(isabeldeIorque, henriqueVIII). /** Mesmo role */
 
 
 /** Da Kings Children */
 
 /** Catarina de Aragao */
 
-pai(HenriqueVIII, Henrique).
-pai(HenriqueVIII, Maria).
-pai(HenriqueVIII, Henrique).  /** Tiveram dois henriques */
-mae(CatarinadeAragao, Henrique).
-mae(CatarinadeAragao, Maria).
-mae(CatarinadeAragao, Henrique).
+pai(henriqueVIII, henrique).
+pai(henriqueVIII, maria).
+pai(henriqueVIII, henrique).  /** Tiveram dois henriques */
+mae(catarinadeAragao, henrique).
+mae(catarinadeAragao, maria).
+mae(catarinadeAragao, henrique).
 
 /** Ana Bolena */
-pai(HenriqueVIII, Isabel).
-pai(HenriqueVIII, Henrique).
-mae(AnaBolena, Isabel).
-mae(AnaBolena, Henrique).
+pai(henriqueVIII, isabel).
+pai(henriqueVIII, henrique).
+mae(anaBolena, isabel).
+mae(anaBolena, henrique).
 
 /** Joana Seymour */
 
-pai(HenriqueVIII, Eduardo).
-mae(JoanaSeymour, Eduardo).
+pai(henriqueVIII, eduardo).
+mae(joanaSeymour, eduardo).
 
 
 
 /** Isabel Blount */
 
-pai(HenriqueVIII, Henrique).
+pai(henriqueVIII, henrique).
+
+
 
 
 
