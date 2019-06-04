@@ -5,7 +5,7 @@
 %% dele que eu e thiago olhamos na quinta.
 %
 
-
+/*filhos legitimos do cara */
 pai(henriqueVIII, henrique).
 pai(henriqueVIII, maria).
 pai(henriqueVIII, henrique).
@@ -14,6 +14,8 @@ pai(henriqueVIII, henrique).
 pai(henriqueVIII, henrique).
 pai(henriqueVIII, eduardo).
 pai(henriqueVII,henriqueVIII).
+
+/*as coitadas que casaram com ele*/
 mae(isabeldeIorque, henriqueVIII).
 
 mae(catarinadeAragao, henrique).
@@ -24,6 +26,12 @@ mae(anaBolena, isabel).
 mae(anaBolena, henrique).
 
 mae(joanaSeymour, eduardo).
+
+
+
+
+
+
 
 
 

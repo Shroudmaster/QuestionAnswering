@@ -5,40 +5,27 @@
 %% dele que eu e thiago olhamos na quinta.
 %
 
-/** Relacoes familiares diretas e legitimas. */
-
-/** Da king. */
-
+/*filhos legitimos do cara */
 pai(henriqueVIII, henrique).
 pai(henriqueVIII, maria).
-pai(henriqueVIII, henrique).  /** Tiveram dois henriques. */
+pai(henriqueVIII, henrique).
 pai(henriqueVIII, isabel).
 pai(henriqueVIII, henrique).
 pai(henriqueVIII, henrique).
 pai(henriqueVIII, eduardo).
-pai(henriqueVII,henriqueVIII). /** Favor manter a forma pai(Pai,Filho). */
-mae(isabeldeIorque, henriqueVIII). /** Mesmo role. */
+pai(henriqueVII,henriqueVIII).
 
-
-/** Da Kings Children. */
-
-/** Catarina de Aragao. */
+/*as coitadas que casaram com ele*/
+mae(isabeldeIorque, henriqueVIII).
 
 mae(catarinadeAragao, henrique).
 mae(catarinadeAragao, maria).
 mae(catarinadeAragao, henrique).
 
-/** Ana Bolena. */
 mae(anaBolena, isabel).
 mae(anaBolena, henrique).
 
-/** Joana Seymour. */
-
 mae(joanaSeymour, eduardo).
-
-
-
-/** Isabel Blount. */
 
 
 
