@@ -1,33 +1,34 @@
-%% Ok, a principio estarei listando aqui a base das relacoes do Henrique
-%% VII conforme a wikipedia.
-%% (https://pt.wikipedia.org/wiki/Henrique_VIII_de_Inglaterra). Vou
-%% tentar fazer a principio so o grosso das relacoes familiares diretas
-%% dele que eu e thiago olhamos na quinta.
+%% Ok, a principio estarei listando aqui os fatos, dados como as
+%% relacoes do grafo de conhecimento obtido a partir de
+%% http://lodmilla.sztaki.hu/lodmilla/?url=http%3A%2F%2Fdbpedia.org%2Fresource%2FHenry_VIII_of_England
+%% e seus predicados e pa
 %
+spouse(X,Y):-
+    spouse(Y,X).
+sucessor(X,Y):-
+    predecessor(Y,X).
 
-/*filhos legitimos do cara */
-pai(henriqueVIII, henrique).
-pai(henriqueVIII, maria).
-pai(henriqueVIII, henrique).
-pai(henriqueVIII, isabel).
-pai(henriqueVIII, henrique).
-pai(henriqueVIII, henrique).
-pai(henriqueVIII, eduardo).
-pai(henriqueVII,henriqueVIII).
+spouse(henryVIII,catherineOfAragon).
+spouse(henryVIII,anneBoleyn).
+spouse(henryVIII,janeSeymour).
+spouse(henryVIII,catherineParr).
+spouse(henryVIII,catherineHoward).
+spouse(henryVIII,anneOfCleves).
+spouse(henryVII,elizabethOfYork).
 
-/*as coitadas que casaram com ele*/
-mae(isabeldeIorque, henriqueVIII).
+successor(henryVII,henryVIII).
+successor(henryVIII,edwardVI).
 
-mae(catarinadeAragao, henrique).
-mae(catarinadeAragao, maria).
-mae(catarinadeAragao, henrique).
+religion(catholic).
+religion(anglican).
 
-mae(anaBolena, isabel).
-mae(anaBolena, henrique).
-
-mae(joanaSeymour, eduardo).
-
-
+parent(henryVIII,maryI).
+parent(catherineOfAragon,maryI).
+parent(henryVIII,elizabethI).
+parent(catherineOfAragon,elizabethI).
+parent(henryVIII,edwardVI).
+parent(janeSeymour,edwardVI).
+parent(henryVIII,henryFitzRoy).
 
 
 
