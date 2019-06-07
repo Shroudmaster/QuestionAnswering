@@ -1,0 +1,39 @@
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit http://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- amante(catarina_de_aragao,henrique_viii).
+false.
+
+?- amante(isabel_blount,henrique_viii).
+true.
+
+?- avo(henrique_vi,isabel_blount).
+false.
+
+?- avo(henrique_vi,maria_i).
+false.
+
+?- avo(henrique_vii,maria_i).
+true.
+
+?- avo(henrique_vii,isabel_blount).
+false.
+
+?- direito_ao_trono(maria_i).
+false.
+
+?- direito_ao_trono(henrique_fitzRoy).
+false.
+
+?- direito_ao_trono(eduardo_i).
+true.
+
+?- bastardo(eduardo_i).
+false.
+
+?- bastardo(henrique_fitzRoy).
+true.
