@@ -1,3 +1,31 @@
+class Rule():
+    def applicable():
+        pass
+    def __init__(self, name):
+        self.name = name
+
+
+class Bastard(Rule):
+    def applicable(child):
+        global graph
+        aux = graph.get('henryVIII')
+        esposas = aux.get('spouse')
+        mae = ''
+        if(child in aux.get('parent')):
+            for keys in graph.keys():
+                if key != 'henryVIII' and child in key.get('parent'):
+                    mae = key
+        else:
+            print("child not found")
+            return
+        if(mae in esposas):
+            return False
+        else:
+            return True
+
+
+
+
 graph = {
     'henryVIII': {
         'spouse': [
