@@ -1,13 +1,8 @@
-class Rule():
-    def applicable():
-        pass
-    def __init__(self, name):
-        self.name = name
+class Forward_chaining():
+    def __init__(self, graph):
+        self.graph = graph
 
-
-class Bastard(Rule):
-    def applicable(child):
-        global graph
+    def bastard(child):
         aux = graph.get('henryVIII')
         esposas = aux.get('spouse')
         mae = ''
@@ -24,16 +19,15 @@ class Bastard(Rule):
             return True
 
 
-
-
 graph = {
     'henryVIII': {
         'spouse': [
             'catherineparr', 'janeseymour', 'catherineofaragon', 'anneboleyn', 'catherinehoward', 'anneofcleves'
         ],
+        'sex' : ['male'],
         'relationships' : [
             'catherineparr', 'janeseymour', 'catherineofaragon', 'anneboleyn', 'catherinehoward', 'anneofcleves',
-                'isabelblount'
+            'isabelblount'
         ],
         'parent': [
             'henryfitzroy', 'elizabethI', 'maryI', 'edwardVI'
@@ -49,6 +43,7 @@ graph = {
         'spouse': [
             'elizabethofyork'
         ],
+        'sex' : ['male'],
         'parent': [
             'henryVIII'
         ],
@@ -60,6 +55,7 @@ graph = {
         'parent': [
             'maryI'
         ],
+        'sex' : ['female'],
         'issue': [
             'maryI'
         ]
@@ -68,6 +64,7 @@ graph = {
         'parent': [
             'elizabethI'
         ],
+        'sex' : ['female'],
         'issue': [
             'elizabethI'
         ]
@@ -76,6 +73,7 @@ graph = {
         'parent': [
             'edwardVI'
         ],
+        'sex' : ['female'],
         'issue': [
             'edwardVI'
         ]
@@ -84,6 +82,7 @@ graph = {
         'parent': [
             'henryVIII'
         ],
+        'sex' : ['female'],
         'issue': [
             'henryVIII'
         ]
@@ -91,6 +90,7 @@ graph = {
     'maryI': {
         'sucessor': [
             'elizabethI'
-        ]
+        ],
+        'sex' : ['fmale']
     }
 }
