@@ -4,6 +4,7 @@ casou(henrique_viii,joana_seymour).
 casou(henrique_viii,ana_de_cleves).
 casou(henrique_viii,catarina_howard).
 casou(henrique_viii,catarina_parr).
+casou(henrique_vii,isabel_de_york).
 pai(henrique_vii,henrique_viii).
 pai(henrique_viii,henrique_fitzRoy).
 pai(henrique_viii,maria_i).
@@ -13,6 +14,7 @@ mae(isabel_blount,henrique_fitzRoy).
 mae(ana_bolena,isabel_i).
 mae(catarina_de_aragao,maria_i).
 mae(joana_seymour,eduardo_i).
+mae(isabel_de_york,henrique_viii).
 homem(eduardo_i).
 homem(henrique_fitzRoy).
 homem(henrique_viii).
@@ -27,6 +29,7 @@ relacionamento_amoroso(henrique_viii,ana_de_cleves).
 relacionamento_amoroso(henrique_viii,catarina_howard).
 relacionamento_amoroso(henrique_viii,catarina_parr).
 relacionamento_amoroso(henrique_viii,maria_bolena).
+
 
 
 bastardo(X) :- pai(henrique_viii,X), mae(Y,X), \+ casou(henrique_viii,Y).
