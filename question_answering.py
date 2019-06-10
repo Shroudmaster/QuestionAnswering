@@ -7,4 +7,7 @@ def delegate_question(question):
         else relations[keysAndRleations[1]](keysAndRleations[0], keysAndRleations[2])
 
 
-
+delegate_question("henryVIII bastard henryVII")
+delegate_question("lover isabelblount")
+delegate_question("claim catherineparr")
+delegate_question("granchild maryI")
