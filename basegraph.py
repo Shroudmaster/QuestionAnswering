@@ -33,7 +33,7 @@ graph = {
         ],
         'relationships' : [
             'catherineparr', 'janeseymour', 'catherineofaragon', 'anneboleyn', 'catherinehoward', 'anneofcleves',
-            'isabelblount'
+                'isabelblount'
         ],
         'parent': [
             'henryfitzroy', 'elizabethI', 'maryI', 'edwardVI'
