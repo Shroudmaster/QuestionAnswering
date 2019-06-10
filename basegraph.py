@@ -3,6 +3,10 @@ graph = {
         'spouse': [
             'catherineparr', 'janeseymour', 'catherineofaragon', 'anneboleyn', 'catherinehoward', 'anneofcleves'
         ],
+        'relationships' : [
+            'catherineparr', 'janeseymour', 'catherineofaragon', 'anneboleyn', 'catherinehoward', 'anneofcleves',
+            'isabelblount'
+        ],
         'parent': [
             'henryfitzroy', 'elizabethI', 'maryI', 'edwardVI'
         ],
