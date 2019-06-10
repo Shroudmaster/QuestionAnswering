@@ -1,32 +1,64 @@
-graph = {"henryVIII" = ["spouse", "catherineparr", "janeseymour","catherineofaragon",
-                        "anneboleyn", "catherinehoward", "anneofcleves"]
-         "henryVII" = ["spouse", "elizabethofyork"]
-         #Parents
-         "henryVIII" = ["parent", "henryfitzroy", "elizabethI", "maryI",
-                         "edwardVI"]
-         "henryVII" = ["parent", "henryVIII"]
-         "catherineofaragon" = ["parent", "maryI"]
-         "anneboleyn" = ["parent", "elizabethI"]
-         "janeseymour" = ["parent", "edwardVI"]
-         "elizabethofyork" = ["parent", "henryVIII"]
-         #successor
-         "henryVII" = ["successor", "henryVIII"]
-         "henryVIII" = ["successor", "edwardVI"]
-         "maryI" = ["elizabethI"]
-         #issues
-         "henryVIII" = ["issue", "henryfitzroy", "elizabethI", "maryI",
-                         "edwardVI"]
-         "elizabethofyork" = ["issue", "henryVIII"]
-         "anneboleyn" = ["issue", "elizabethI"]
-         "janeseymour" = ["issue", "edwardVI"]
-         "catherineofaragon" = ["issue", "maryI"]
-         #tudors
-         "HouseofTudor" = ["subject", "henryVII", "henryVIII", "catherineofaragon"
-                           "edwardVI", "elizabethI", "maryI", "elizabethofyork"]
-         #Anglicans
-         "Anglican" = ["religion", "elizabethI", "henryVIII", "anneboleyn"]
-         "PalaceofPlacentia" = ["birth", "henryVIII", "maryI", "elizabethI"]
-
-
-
-        }
+graph = {
+    'henryVIII': {
+        'spouse': [
+            'catherineparr', 'janeseymour', 'catherineofaragon', 'anneboleyn', 'catherinehoward', 'anneofcleves'
+        ],
+        'parent': [
+            'henryfitzroy', 'elizabethI', 'maryI', 'edwardVI'
+        ],
+        'successor': [
+            'edwardVI'
+        ],
+        'issue': [
+            'henryfitzroy', 'elizabethI', 'maryI', 'edwardVI'
+        ]
+    },
+    'henryVII': {
+        'spouse': [
+            'elizabethofyork'
+        ],
+        'parent': [
+            'henryVIII'
+        ],
+        'sucessor': [
+            'henryVIII'
+        ]
+    },
+    'catherineofaragon': {
+        'parent': [
+            'maryI'
+        ],
+        'issue': [
+            'maryI'
+        ]
+    },
+    'anneboleyn': {
+        'parent': [
+            'elizabethI'
+        ],
+        'issue': [
+            'elizabethI'
+        ]
+    },
+    'janeseymour': {
+        'parent': [
+            'edwardVI'
+        ],
+        'issue': [
+            'edwardVI'
+        ]
+    },
+    'elizabethofyork': {
+        'parent': [
+            'henryVIII'
+        ],
+        'issue': [
+            'henryVIII'
+        ]
+    },
+    'maryI': {
+        'sucessor': [
+            'elizabethI'
+        ]
+    }
+}
