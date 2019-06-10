@@ -1,5 +1,6 @@
 from basegraph import graph as grafo
 
+
 def check_if_is_spouse(person1, person2):
     return person2 in grafo[person1]["spouse"]
 
@@ -13,21 +14,22 @@ def check_if_is_child(person, parent):
 
 
 def check_if_is_bastard_kid(person1, person2):
+    clause_is_child_of_spouse = False
     for spouse in grafo[person2]["spouse"]:
-        '''
-        catherineparr não é um nó no dicionário, então, quando eu quero verificar os filhos dela, não encontra a chave
-        '''
-        if not check_if_is_child(person1, spouse):
-            print(True)
-            return True
-        print(False)
-    return False
+        try:
+            clause_is_child_of_spouse = check_if_is_child(person1, spouse)
+        except KeyError:
+            continue
+    clause_is_child = check_if_is_child(person1, person2)
+    print(clause_is_child and not clause_is_child_of_spouse)
+    return clause_is_child and not clause_is_child_of_spouse
 
 
 def check_if_is_lover_of_henryVIII(person):
-    clauseHasRelationship = check_if_has_relationship("henryVIII", person)
-    clauseIsSpouse = check_if_is_spouse("henryVIII", person)
-    print(clauseHasRelationship and not clauseIsSpouse)
+    clause_has_relationship = check_if_has_relationship("henryVIII", person)
+    clause_is_spouse = check_if_is_spouse("henryVIII", person)
+    print(clause_has_relationship and not clause_is_spouse)
+    return clause_has_relationship and not clause_is_spouse
 
 
 def check_if_is_is_granchild_of_henryVII(person):
@@ -39,7 +41,13 @@ def check_if_is_is_granchild_of_henryVII(person):
 
 
 def check_if_can_claim_throne(person):
-    print("claim %s" % person)
+    if not check_if_is_child(person, "henryVIII"):
+        print(False)
+        return False
+    clause_is_legit_child = not check_if_is_bastard_kid(person, "henryVIII")
+    clause_is_male = grafo[person]["sex"] == "male"
+    print(clause_is_legit_child and clause_is_male)
+    return clause_is_legit_child and clause_is_male
 
 
 relations = {"bastard": check_if_is_bastard_kid,

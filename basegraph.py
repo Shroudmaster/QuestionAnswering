@@ -24,8 +24,8 @@ graph = {
         'spouse': [
             'catherineparr', 'janeseymour', 'catherineofaragon', 'anneboleyn', 'catherinehoward', 'anneofcleves'
         ],
-        'sex' : ['male'],
-        'relationships' : [
+        'sex': 'male',
+        'relationships': [
             'catherineparr', 'janeseymour', 'catherineofaragon', 'anneboleyn', 'catherinehoward', 'anneofcleves',
             'isabelblount'
         ],
@@ -43,7 +43,7 @@ graph = {
         'spouse': [
             'elizabethofyork'
         ],
-        'sex' : ['male'],
+        'sex': 'male',
         'parent': [
             'henryVIII'
         ],
@@ -55,7 +55,7 @@ graph = {
         'parent': [
             'maryI'
         ],
-        'sex' : ['female'],
+        'sex': 'female',
         'issue': [
             'maryI'
         ]
@@ -64,7 +64,7 @@ graph = {
         'parent': [
             'elizabethI'
         ],
-        'sex' : ['female'],
+        'sex': 'female',
         'issue': [
             'elizabethI'
         ]
@@ -73,7 +73,7 @@ graph = {
         'parent': [
             'edwardVI'
         ],
-        'sex' : ['female'],
+        'sex': 'female',
         'issue': [
             'edwardVI'
         ]
@@ -82,7 +82,7 @@ graph = {
         'parent': [
             'henryVIII'
         ],
-        'sex' : ['female'],
+        'sex': 'female',
         'issue': [
             'henryVIII'
         ]
@@ -91,6 +91,9 @@ graph = {
         'sucessor': [
             'elizabethI'
         ],
-        'sex' : ['fmale']
+        'sex': 'female'
+    },
+    'edwardVI': {
+        'sex': 'male'
     }
 }
