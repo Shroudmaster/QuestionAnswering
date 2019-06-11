@@ -93,6 +93,12 @@ graph = {
         ],
         'sex': 'female'
     },
+    'elizabethI': {
+        'sex': 'female'
+    },
+    'henryfitzroy': {
+        'sex': 'female'
+    },
     'edwardVI': {
         'sex': 'male'
     }
