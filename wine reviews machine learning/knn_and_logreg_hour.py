@@ -34,20 +34,20 @@ knn = KNeighborsClassifier(n_neighbors=3)
 #y_pred = knn.predict(X_test)
 
 knn_scores = cross_val_score(knn, train, target, cv = 10, scoring='accuracy')
-print("Accuracy:",knn_scores.mean())
+
 knn = KNeighborsClassifier(n_neighbors=3)
 knn_scores_precision = cross_val_score(knn,  train, target, cv = 10, scoring ='precision_micro')
-print("Precision:",knn_scores_precision.mean())
+
 knn = KNeighborsClassifier(n_neighbors=3)
 knn_scores_f1 = cross_val_score(knn,  train, target, cv = 10, scoring ='f1_micro')
 
 
 
 # Model Accuracy, how often is the classifier correct?
-
-
+print("Accuracy:",knn_scores.mean())
+print("Precision:",knn_scores_precision.mean())
 print("F1:",knn_scores_f1.mean())
-#print("Sensibilidade:",knn_scores_auc.mean())
+
 logreg = LogisticRegression()
 
 #logreg.fit(X_train, y_train)
