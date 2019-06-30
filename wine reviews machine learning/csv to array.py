@@ -6,15 +6,15 @@ from sklearn import preprocessing
 
 le = preprocessing.LabelEncoder()
 
-file = "training_utf8.csv"
+file = "train_set.csv"
 
-df = pd.read_csv(file, header = 0)
+df = pd.read_csv(file, header = 0, delimiter = ";")
 
 original_headers = list(df.columns.values)
 
-interested_headers = ['country', 'designation', 'price', 'province', 'region_1', 'region_2', 'variety', 'winery']
+interested_headers = ['Hour (Coded)','Immobilized bus','Broken Truck','Vehicle excess','Accident victim','Running over','Fire vehicles','Occurrence involving freight','Incident involving dangerous freight','Lack of electricity','Fire','Point of flooding','Manifestations','Defect in the network of trolleybuses','Tree on the road','Semaphore off','Intermittent Semaphore']
 
-points = list(df['points'])
+points = list(df['Slowness in traffic (%)'])
 
 target = list()
 for p in points:
@@ -24,7 +24,6 @@ for p in points:
 
 dataset = list()
 
-dataset.append(list(df['index']))
 
 for header in interested_headers:
     #column = list()
@@ -33,23 +32,21 @@ for header in interested_headers:
 
 organized_dataset = list()
 
+
 for i in range(len(dataset[0])):
     line = list()
     for j in range(len(dataset)):
         line.append(dataset[j][i])
     organized_dataset.append(line)
-
-with open('organized_dataset.csv','w') as writeFile:
+print(organized_dataset[0])
+print(organized_dataset[1])
+with open('organized_dataset.csv','w',newline='') as writeFile:
     writer = csv.writer(writeFile)
     writer.writerows(organized_dataset)
 writeFile.close()
 
-with open('target.csv','w') as targetFile:
+with open('target.csv','w',newline='') as targetFile:
     writer = csv.writer(targetFile)
     writer.writerows(target)
     
 x = input("Enter to close")
-               
-    
-
-
