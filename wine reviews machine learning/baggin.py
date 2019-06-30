@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics
 
-data = pd.read_csv('Behavior of the urban traffic of the city of Sao Paulo in Brazil.csv', sep = ';')
+data = pd.read_csv('baggindata.csv', sep = ';')
 #print(data.Immobilized_bus)
 #hour = plt.plot(data.Hour_Coded, ls = '', marker = 'o', label = "hour")
 
