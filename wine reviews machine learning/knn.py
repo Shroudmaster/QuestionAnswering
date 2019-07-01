@@ -13,9 +13,9 @@ with open('organized_dataset.csv') as readFile:
 for i in range(len(training_dataset)):
     for j in range(len(training_dataset[0])):
         training_dataset[i][j] = int(training_dataset[i][j])
-               
 
-print(training_dataset)
+
+print("this is training dataset:", training_dataset)
 
 training_dataset = np.asarray(training_dataset,np.float64)
 readFile.close()
@@ -30,11 +30,11 @@ with open('target.csv') as readTarget:
         content = list(row)
         training_target = training_target + content
 
-print(training_target)
+print("this is training target:", training_target)
 for i in range(len(training_target)):
     training_target[i] = float(training_target[i])
     training_target[i] = int(training_target[i])
-    
+
 
 training_target = np.asarray(training_target)
 readTarget.close()
@@ -49,7 +49,7 @@ for i in range(len(testing_dataset)):
     for j in range(len(testing_dataset[0])):
         testing_dataset[i][j] = int(testing_dataset[i][j])
 
-print(testing_dataset)
+print("this is testing dataset:", testing_dataset)
 
 testing_dataset = np.asarray(testing_dataset)
 
@@ -120,4 +120,3 @@ with open('predicted_mlp.csv','w',newline='') as writeFile:
     writer.writerow(target_predicted)
 
 x = input("Enter to close")
-
