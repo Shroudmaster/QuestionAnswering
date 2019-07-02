@@ -5,6 +5,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_score
+from sklearn.preprocessing import StandardScaler
 
 #wine = datasets.load_wine()
 #X_train, X_test, y_train, y_test = train_test_split(wine.data, wine.target, test_size=0.2)
@@ -23,8 +24,12 @@ for x in range(len(target)):
     target[x] = float(target[x])
     target[x] = int(target[x])
 
-#print(train)
-#print(target)
+#data pre treatment
+scaler = StandardScaler()
+train = scaler.fit_transform(train)
+
+print(train)
+print(target)
 X_train, X_test, y_train, y_test = train_test_split(train, target, test_size=0.2)
 
 #Create KNN Classifier
