@@ -23,7 +23,7 @@ for x in range(len(target)):
 X_train, X_test, y_train, y_test = train_test_split(train, target, test_size=0.2)
 
 baggin = BaggingClassifier(KNeighborsClassifier(), n_estimators = 53, max_samples = 0.5, max_features = 0.5)
-voter = VotingClassifier(baggin)
+#voter = VotingClassifier(baggin)
 
 baggin.fit(X_train, y_train)
 
