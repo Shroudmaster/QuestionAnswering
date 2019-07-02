@@ -48,9 +48,9 @@ knn.fit(X_train, y_train)
 #Predict the response for test dataset
 y_pred = knn.predict(X_test)
 
-plt.plot(X_test, marker = 'o', ls = '-')
 plt.plot(y_test, marker = 'o', ls = '-')
 plt.plot(y_pred, marker = 'o', ls = '-')
+
 plt.show()
 
 knn_scores = cross_val_score(knn, train, target, cv = 10, scoring='accuracy')
@@ -78,10 +78,14 @@ logreg_scores = cross_val_score(logreg, train, target, cv = 10, scoring='accurac
 logreg_scores_precision = cross_val_score(logreg,  train, target, cv = 10, scoring ='precision_micro')
 logreg_scores_f1 = cross_val_score(logreg,  train, target, cv = 10, scoring ='f1_micro')
 
-plt.plot(knn_scores, marker = 'o', ls = '-')
-plt.plot(logreg_scores, marker = 'o', ls = '-')
+plt.plot(knn_scores, marker = '', ls = '-')
+plt.plot(logreg_scores, marker = '', ls = '-')
+
 
 plt.show()
+
+print(list(knn_scores))
+print(list(logreg_scores))
 
 print("Accuracy:",logreg_scores.mean())
 print("Precision:",logreg_scores_precision.mean())
