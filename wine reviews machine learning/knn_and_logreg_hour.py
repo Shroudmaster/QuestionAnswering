@@ -14,6 +14,7 @@ target = [4.1, 6.6, 8.7, 9.2, 11.1, 10.9, 8.3, 8.2, 7.6, 6.4, 5.2, 4.7, 4.8, 4.9
 line = list()
 train = list()
 for x in t:
+    line = []
     line.append(x)
     train.append(line)
 
@@ -21,7 +22,8 @@ for x in range(len(target)):
     target[x] = float(target[x])
     target[x] = int(target[x])
     
-
+print(train)
+print(target)
 X_train, X_test, y_train, y_test = train_test_split(train, target, test_size=0.2)
 
 #Create KNN Classifier
