@@ -3,9 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import metrics
-from sklearn.ensemble import BaggingClassifier
-trainer = pd.read_csv('organized_dataset.csv')
-tester = pd.read_csv('test_dataset.csv')
+from sklearn.ensemble import BaggingClassifier, VotingClassifier
 #print(data.Immobilized_bus)
 #hour = plt.plot(data.Hour_Coded, ls = '', marker = 'o', label = "hour")
 t = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -14,6 +12,7 @@ target = [4.1, 6.6, 8.7, 9.2, 11.1, 10.9, 8.3, 8.2, 7.6, 6.4, 5.2, 4.7, 4.8, 4.9
 line = list()
 train = list()
 for x in t:
+    line = []
     line.append(x)
     train.append(line)
 
@@ -21,12 +20,15 @@ for x in range(len(target)):
     target[x] = float(target[x])
     target[x] = int(target[x])
 
-
 X_train, X_test, y_train, y_test = train_test_split(train, target, test_size=0.2)
 
-baggin = BaggingClassifier(KNeighborsClassifier(), n_estimators = 47, max_samples = 0.5, max_features = 0.5)
+baggin = BaggingClassifier(KNeighborsClassifier(), n_estimators = 53, max_samples = 0.5, max_features = 0.5)
+#voter = VotingClassifier(baggin)
 
 baggin.fit(X_train, y_train)
 
-plt.plot(baggin.predict(X_test), marker = 'o', ls = '')
+p1 = plt.plot(baggin.predict(X_test), marker = 'o', ls = '')
+p2 = plt.plot(y_test, marker = 'o', ls = '')
+
+plt.legend((p1[0],p2[0]),('bagging', 'result'))
 plt.show()

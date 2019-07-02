@@ -69,19 +69,24 @@ for i in train:
 
 le = LabelEncoder()
 target = le.fit_transform(target)
-    
-print(train)
-print(target)
+
+#print(train)
+#print(target)
 X_train, X_test, y_train, y_test = train_test_split(train, target, test_size=0.2)
 
 #Create KNN Classifier
 knn = KNeighborsClassifier(n_neighbors=3)
 
 #Train the model using the training sets
-#knn.fit(X_train, y_train)
+knn.fit(X_train, y_train)
 
 #Predict the response for test dataset
-#y_pred = knn.predict(X_test)
+y_pred = knn.predict(X_test)
+p1 = plt.plot(y_pred, marker = 'o', ls = '')
+p2 = plt.plot(y_test, marker = 'o', ls = '')
+
+plt.legend((p1[0],p2[0]),('KNN', 'result'))
+plt.show()
 
 knn_scores = cross_val_score(knn, train, target, cv = 10, scoring='accuracy')
 
@@ -105,7 +110,7 @@ logreg = LogisticRegression()
 #logreg_predict = logreg.predict(X_test)
 
 logreg_scores = cross_val_score(logreg, train, target, cv = 10, scoring='accuracy')
-logreg_scores_precision = cross_val_score(logreg,  train, target, cv = 10, scoring ='precision_micro') 
+logreg_scores_precision = cross_val_score(logreg,  train, target, cv = 10, scoring ='precision_micro')
 logreg_scores_f1 = cross_val_score(logreg,  train, target, cv = 10, scoring ='f1_micro')
 
 plt.plot(knn_scores, marker = 'o', ls = '-')

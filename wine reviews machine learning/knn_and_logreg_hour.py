@@ -68,7 +68,7 @@ print("Accuracy:",knn_scores.mean())
 print("Precision:",knn_scores_precision.mean())
 print("F1:",knn_scores_f1.mean())
 
-logreg = LogisticRegression()
+logreg = LogisticRegression(C = 10)
 
 #logreg.fit(X_train, y_train)
 
