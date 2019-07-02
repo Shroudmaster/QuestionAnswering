@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
@@ -26,10 +27,13 @@ for x in range(len(target)):
 #data pre treatment
 scaler = StandardScaler()
 train = scaler.fit_transform(train)
-    
+
 print(train)
 print(target)
 X_train, X_test, y_train, y_test = train_test_split(train, target, test_size=0.2)
+plt.plot(train, marker = 'o', ls = '')
+plt.plot(target, marker = 'o', ls = '')
+plt.show()
 
 #Create KNN Classifier
 knn = KNeighborsClassifier(n_neighbors=3)
@@ -62,7 +66,7 @@ logreg = LogisticRegression()
 #logreg_predict = logreg.predict(X_test)
 
 logreg_scores = cross_val_score(logreg, train, target, cv = 10, scoring='accuracy')
-logreg_scores_precision = cross_val_score(logreg,  train, target, cv = 10, scoring ='precision_micro') 
+logreg_scores_precision = cross_val_score(logreg,  train, target, cv = 10, scoring ='precision_micro')
 logreg_scores_f1 = cross_val_score(logreg,  train, target, cv = 10, scoring ='f1_micro')
 
 print("Accuracy:",logreg_scores.mean())
