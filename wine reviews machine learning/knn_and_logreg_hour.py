@@ -26,9 +26,6 @@ for x in range(len(target)):
 #print(train)
 #print(target)
 X_train, X_test, y_train, y_test = train_test_split(train, target, test_size=0.2)
-plt.plot(train, marker = 'o', ls = '')
-plt.plot(target, marker = 'o', ls = '')
-plt.show()
 
 #Create KNN Classifier
 knn = KNeighborsClassifier(n_neighbors=3)
@@ -54,7 +51,7 @@ print("Accuracy:",knn_scores.mean())
 print("Precision:",knn_scores_precision.mean())
 print("F1:",knn_scores_f1.mean())
 
-logreg = LogisticRegression()
+logreg = LogisticRegression(C = 10)
 
 #logreg.fit(X_train, y_train)
 
