@@ -84,4 +84,7 @@ logreg_scores_f1 = cross_val_score(logreg,  train, target, cv = 10, scoring ='f1
 print("Accuracy:",logreg_scores.mean())
 print("Precision:",logreg_scores_precision.mean())
 print("F1:",logreg_scores_f1.mean())
+
+plt.plot(knn_scores, marker = 'o', ls = '-')
+plt.plot(logreg_scores, marker = 'o', ls = '-')
 a = input("Enter to close")

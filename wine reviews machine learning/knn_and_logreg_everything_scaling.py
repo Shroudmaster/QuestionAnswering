@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
@@ -106,6 +107,13 @@ logreg = LogisticRegression()
 logreg_scores = cross_val_score(logreg, train, target, cv = 10, scoring='accuracy')
 logreg_scores_precision = cross_val_score(logreg,  train, target, cv = 10, scoring ='precision_micro') 
 logreg_scores_f1 = cross_val_score(logreg,  train, target, cv = 10, scoring ='f1_micro')
+
+plt.plot(knn_scores, marker = 'o', ls = '-')
+plt.plot(logreg_scores, marker = 'o', ls = '-')
+plt.show()
+
+print(knn_scores)
+print(logerg_scores)
 
 print("Accuracy:",logreg_scores.mean())
 print("Precision:",logreg_scores_precision.mean())
