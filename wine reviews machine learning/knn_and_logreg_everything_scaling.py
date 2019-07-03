@@ -105,18 +105,18 @@ print("F1:",knn_scores_f1.mean())
 
 logreg = LogisticRegression()
 
-#logreg.fit(X_train, y_train)
+logreg.fit(X_train, y_train)
 
-#logreg_predict = logreg.predict(X_test)
+logreg_predict = logreg.predict(X_test)
+plt.plot(y_pred, marker = 'o', ls = '-')
+plt.plot(y_test, marker = 'o', ls = '-')
+plt.legend((p1[0],p2[0]),('Predicted_LogReg', 'Test_LogReg'))
+plt.show()
 
 logreg_scores = cross_val_score(logreg, train, target, cv = 10, scoring='accuracy')
 logreg_scores_precision = cross_val_score(logreg,  train, target, cv = 10, scoring ='precision_micro')
 logreg_scores_f1 = cross_val_score(logreg,  train, target, cv = 10, scoring ='f1_micro')
 
-plt.plot(knn_scores, marker = '', ls = '-')
-plt.plot(logreg_scores, marker = '', ls = '-')
-plt.legend((p1[0],p2[0]),('KNN_scores', 'logreg_scores'))
-plt.show()
 
 print(knn_scores)
 print(logreg_scores)

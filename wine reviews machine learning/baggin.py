@@ -23,12 +23,12 @@ for x in range(len(target)):
 X_train, X_test, y_train, y_test = train_test_split(train, target, test_size=0.2)
 
 baggin = BaggingClassifier(KNeighborsClassifier(), n_estimators = 53, max_samples = 0.5, max_features = 0.5)
-#voter = VotingClassifier(baggin)
+voter = VotingClassifier(baggin)
 
 baggin.fit(X_train, y_train)
+y_pred = baggin.predict(X_test)
+p1 = plt.plot(y_pred, marker = 'o', ls = '-')
+p2 = plt.plot(y_test, marker = 'o', ls = '-')
 
-p1 = plt.plot(baggin.predict(X_test), marker = 'o', ls = '')
-p2 = plt.plot(y_test, marker = 'o', ls = '')
-
-plt.legend((p1[0],p2[0]),('bagging', 'result'))
+plt.legend((p1[0],p2[0]),('Predicted_Bagging', 'Test_Bagging'))
 plt.show()
